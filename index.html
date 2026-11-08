@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090a0d">
+  <meta name="description" content="Dark Hub — أدوات وألعاب وخلفيات في تجربة عربية واحدة.">
+  <title>Dark Hub — عالمك الرقمي</title>
+  <link rel="stylesheet" href="css/site.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#home" data-route="home" aria-label="Dark Hub — الرئيسية">
+        <span class="brand-mark">DH</span>
+        <span class="brand-copy"><strong>DARK HUB</strong><small>THE DIGITAL LOUNGE</small></span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="فتح قائمة التنقل" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+      <nav class="main-nav" id="mainNav" aria-label="التنقل الرئيسي">
+        <button type="button" class="nav-link is-active" data-route="home">الرئيسية</button>
+        <button type="button" class="nav-link" data-route="wallpapers">الخلفيات</button>
+        <button type="button" class="nav-link" data-route="games">الألعاب</button>
+        <button type="button" class="nav-link" data-route="tools">الأدوات</button>
+      </nav>
+      <div class="topbar-side"><span class="status-dot"></span><span>منصتك الرقمية</span></div>
+    </header>
+
+    <main id="mainContent">
+      <section class="screen screen-home" id="screenHome" data-screen="home">
+        <section class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="eyebrow-line"></span> DARK HUB <span class="eyebrow-sep">/</span> DIGITAL EDITION 2026</p>
+            <h1>كل حاجة مفيدة<br>في مكان <span>واحد.</span></h1>
+            <p class="hero-lede">مساحة واحدة تجمع أدواتك اليومية، ألعابك المفضلة، وخلفيات تستاهل شاشة موبايلك.</p>
+            <div class="hero-actions">
+              <button class="button button-gold" type="button" data-open-page="games">اكتشف الألعاب <span aria-hidden="true">↙</span></button>
+              <button class="button button-outline" type="button" data-open-page="wallpapers">تصفّح الخلفيات</button>
+            </div>
+            <div class="hero-footnote"><span class="live-mark"></span> كل أدواتك. كل وقتك. من مكان واحد.</div>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <div class="art-orbit orbit-a"></div>
+            <div class="art-orbit orbit-b"></div>
+            <div class="art-orbit orbit-c"></div>
+            <div class="art-core"><span>DH</span><small>EST. 2026</small></div>
+            <div class="art-caption caption-top">TOOLS · GAMES · WALLPAPERS</div>
+            <div class="art-caption caption-bottom">YOUR DIGITAL UNIVERSE</div>
+            <span class="spark spark-one">✦</span><span class="spark spark-two">✧</span><span class="spark spark-three">✦</span>
+          </div>
+          <div class="hero-index"><span>01</span><i></i><span>04</span></div>
+        </section>
+
+        <section class="stats-row" aria-label="أقسام الموقع">
+          <div class="stat"><strong>03</strong><span>أقسام رئيسية</span></div>
+          <span class="stat-divider"></span>
+          <div class="stat"><strong>04</strong><span>ألعاب تفاعلية</span></div>
+          <span class="stat-divider"></span>
+          <div class="stat"><strong>06</strong><span>أدوات مفيدة</span></div>
+          <span class="stat-note">كل ما تحتاجه، مرتب على مزاجك.</span>
+        </section>
+
+        <section class="collection">
+          <div class="section-heading">
+            <div><p class="eyebrow">THE COLLECTION</p><h2>اختار مسارك.</h2></div>
+            <p>ثلاث تجارب. واجهة واحدة.<br>ادخل على اللي يهمك.</p>
+          </div>
+          <div class="collection-grid">
+            <button class="collection-card card-wallpapers" type="button" data-open-page="wallpapers">
+              <span class="card-no">01 / VISUALS</span>
+              <span class="collection-icon">◈</span>
+              <span class="collection-title">الخلفيات</span>
+              <span class="collection-desc">خلفيات للموبايل بجودة عالية</span>
+              <span class="card-link">استكشف المكتبة <b>↙</b></span>
+              <span class="card-glow"></span>
+            </button>
+            <button class="collection-card card-games" type="button" data-open-page="games">
+              <span class="card-no">02 / PLAY</span>
+              <span class="collection-icon">✳</span>
+              <span class="collection-title">الألعاب</span>
+              <span class="collection-desc">ألعاب بسيطة وممتعة</span>
+              <span class="card-link">ادخل ساحة اللعب <b>↙</b></span>
+              <span class="card-glow"></span>
+            </button>
+            <button class="collection-card card-tools" type="button" data-open-page="tools">
+              <span class="card-no">03 / UTILITY</span>
+              <span class="collection-icon">⌘</span>
+              <span class="collection-title">الأدوات</span>
+              <span class="collection-desc">أدوات خدمية سريعة ومفيدة</span>
+              <span class="card-link">افتح صندوق الأدوات <b>↙</b></span>
+              <span class="card-glow"></span>
+            </button>
+          </div>
+        </section>
+
+        <section class="feature-strip">
+          <div class="strip-heading">
+            <p class="eyebrow">IN THE SPOTLIGHT</p>
+            <h2>ابدأ من هنا.</h2>
+            <p>جرب واحدة من أكثر التجارب استخدامًا على Dark Hub.</p>
+          </div>
+          <button class="spotlight spotlight-game" type="button" data-open-page="space">
+            <span class="spotlight-icon">✦</span>
+            <span class="spotlight-label">FEATURED GAME</span>
+            <strong>حارس المجرة</strong>
+            <span class="spotlight-sub">جالاكسي شوتر · موجات وتعزيزات</span>
+            <span class="spotlight-arrow">↙</span>
+          </button>
+          <button class="spotlight spotlight-tool" type="button" data-open-page="downloader">
+            <span class="spotlight-icon">↧</span>
+            <span class="spotlight-label">QUICK TOOL</span>
+            <strong>TikTok Downloader</strong>
+            <span class="spotlight-sub">تحميل فيديوهات وألبومات صور</span>
+            <span class="spotlight-arrow">↙</span>
+          </button>
+        </section>
+
+        <section class="promise-row">
+          <div class="promise-title"><p class="eyebrow">WHAT'S NEXT</p><h2>واللي جاي أحلى.</h2></div>
+          <div class="promise-item"><span>✧</span><p>خلفيات جديدة يتم إضافتها يوميًا</p></div>
+          <div class="promise-item"><span>✹</span><p>لعبة جديدة تضاف أسبوعيًا</p></div>
+          <div class="promise-item"><span>⌘</span><p>أدوات تحدث دوريًا</p></div>
+        </section>
+
+        <section class="contact-band">
+          <div><p class="eyebrow">YOUR IDEA, NEXT</p><h2>عندك فكرة؟</h2><p>لو عندك أداة أو لعبة أو إضافة تحب تشوفها في الموقع، ابعتلنا اقتراحك.</p></div>
+          <a href="https://wa.me/201098029320" target="_blank" rel="noopener noreferrer" class="button button-gold">تواصل معنا على واتساب <span>↙</span></a>
+        </section>
+      </section>
+
+      <section class="screen screen-workspace" id="screenWorkspace" data-screen="workspace" hidden>
+        <div class="workspace-heading">
+          <div><p class="eyebrow" id="workspaceKicker">DARK HUB / EXPERIENCE</p><h1 id="workspaceTitle">استكشف الموقع</h1></div>
+          <button class="button button-outline workspace-back" type="button" data-route="home">العودة للرئيسية <span>↙</span></button>
+        </div>
+        <div class="frame-shell">
+          <div class="frame-topline"><span class="frame-light"></span><span class="frame-light"></span><span class="frame-light"></span><span id="frameLabel">DARK HUB EXPERIENCE</span><span class="frame-live"><i></i> LIVE</span></div>
+          <iframe id="featureFrame" title="تجربة Dark Hub" loading="lazy" allow="fullscreen"></iframe>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="footer-brand" href="#home" data-route="home"><span class="brand-mark">DH</span><strong>DARK HUB</strong></a>
+      <span>أدوات • ألعاب • خلفيات • وأكثر</span>
+      <span>© 2026 Dark Hub</span>
+    </footer>
+  </div>
+</body>
+</html>
