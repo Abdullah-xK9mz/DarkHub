@@ -1,0 +1,68 @@
+<!doctype html>
+<html dir="rtl" lang="ar">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🖼️ خلفيات Dark Hub</title>
+    <link rel="stylesheet" href="../css/pages/wallpapers.css">
+  <link rel="stylesheet" href="../css/features.css">
+</head>
+  <body>
+
+    <!-- شريط الموقع — أعلى الصفحة -->
+    <header>
+        <a href="../index.html" class="logo"> Dark Hub</a>
+        <nav>
+            <a href="../index.html">الرئيسية</a>
+            <a href="wallpapers.html" class="active">الخلفيات</a>
+            <a href="games.html">الألعاب</a>
+            <a href="Tools.html">الأدوات</a>
+        </nav>
+    </header>
+
+    <div class="page-container">
+
+        <!-- الواجهة الرئيسية — Hero -->
+        <section class="hero">
+            <h1>🖼️ خلفيات Dark Hub</h1>
+            <p>خلفيات عالية الجودة للموبايل.</p>
+        </section>
+
+        <!-- فلاتر التصنيفات -->
+        <div class="filter-container">
+            <button class="filter-btn active" onclick="filterCategory('all', this)">الكل</button>
+            <button class="filter-btn" onclick="filterCategory('anime', this)">Anime</button>
+            <button class="filter-btn" onclick="filterCategory('football', this)">Football</button>
+            <button class="filter-btn" onclick="filterCategory('cars', this)">Cars</button>
+            <button class="filter-btn" onclick="filterCategory('nature', this)">Nature</button>
+            <button class="filter-btn" onclick="filterCategory('cosmos', this)">Cosmos</button>
+        </div>
+
+        <!-- حاوية عرض الخلفيات -->
+        <div id="dynamic-gallery-container">
+            <!-- سيتم تعبئة الصور هنا ديناميكياً بواسطة JavaScript -->
+        </div>
+
+    </div>
+
+    <!-- شاشة المعاينة الفخمة Lightbox -->
+    <div id="lightbox">
+      <button class="close-lightbox" onclick="closeLightbox()">✕</button>
+      <img id="lightbox-img" class="lightbox-content" src="" alt="معاينة الخلفية">
+      <button id="lightbox-download-btn" onclick="downloadCurrentLightbox()" class="lightbox-download">تحميل الخلفية ⬇️</button>
+    </div>
+
+    <!-- أسفل الموقع — Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo"> Dark Hub</div>
+            <div class="footer-desc">أدوات • ألعاب • خلفيات • وأكثر</div>
+            <div class="footer-bottom">
+                © 2026 Dark Hub
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/pages/wallpapers.js"></script>
+  </body>
+</html>

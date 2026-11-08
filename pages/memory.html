@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>طابق الإيموجي | تدريب الذاكرة</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=JetBrains+Mono:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/pages/memory.css">
+  <link rel="stylesheet" href="../css/features.css">
+</head>
+<body>
+
+
+  <div id="winOverlay">
+    <h2>🏆 عاش يا وحش!</h2>
+    <p id="winDesc"></p>
+    <button class="win-btn" onclick="closeWin()">جولة جديدة 🔄</button>
+  </div>
+
+  <div class="eyebrow">تدريب الذاكرة البصرية</div>
+  <h1>طابق <span>الإيموجي</span> 🧠</h1>
+
+  <div class="hud">
+    <div class="stat-pill stat-moves">المحاولات <b id="moves-count">0</b></div>
+    <div class="stat-pill stat-matches">الأزواج <b id="match-count">0</b>/<b class="mono" id="total-pairs">10</b></div>
+    <div class="select-wrap">
+      <select id="difficulty" onchange="resetGame()">
+        <option value="easy" selected>سهل (4×5) 🥱</option>
+        <option value="medium">متوسط (5×6) 🤔</option>
+        <option value="hard">صعب (6×6) 🔥</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="game-grid" id="grid"></div>
+
+  <div class="actions">
+    <button class="btn-nav-back" onclick="resetGame()">جولة جديدة 🔄</button>
+    <a href="games.html" class="btn-nav-back">الألعاب 🎮</a>
+  </div>
+
+<script src="../js/pages/memory.js"></script>
+</body>
+</html>

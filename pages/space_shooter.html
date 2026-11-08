@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>جالاكسي شوتر | حارس المجرة</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=JetBrains+Mono:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/pages/space-shooter.css">
+  <link rel="stylesheet" href="../css/features.css">
+</head>
+<body>
+
+<div id="stage">
+  <canvas id="game"></canvas>
+
+  <div class="hud">
+    <div class="hud-left">
+      <div class="pill">السكور <b id="hudScore">0</b></div>
+      <div class="pill lives">الدروع <b id="hudLives">❤️❤️❤️</b></div>
+    </div>
+    <div class="hud-right">
+      <button class="pause-btn" onclick="pauseGame()">⏸</button>
+      <div class="pill">الموجة <b id="hudWave">1</b></div>
+      <div class="pill" id="diffPill">الصعوبة <b id="hudDiff">سهل 🥱</b></div>
+      <div class="pill combo" id="comboPill">كومبو <b id="hudCombo">x1</b></div>
+    </div>
+  </div>
+
+  <div class="buffs">
+    <div class="buff-chip buff-shield" id="chipShield">🛡️ درع</div>
+    <div class="buff-chip buff-rapid" id="chipRapid">⚡ سريع</div>
+    <div class="buff-chip buff-weapon" id="chipWeapon">🔱 موزّع</div>
+  </div>
+
+  <div id="nukeFlash"></div>
+
+  <div class="overlay" id="startScreen" style="display:flex;">
+    <div class="eyebrow">حارس المجرة</div>
+    <h2>جالاكسي شوتر 🌌</h2>
+    <div class="how-to">
+      <div class="how-chip">🕹️ <b>اسحب / حركات السهم</b> للتحكم</div>
+      <div class="how-chip">💥 <b>نيران تلقائية</b> مستمرة</div>
+      <div class="how-chip">⚡ <b>اجمع القوى</b> من الأعداء</div>
+    </div>
+    <p>دافع عن المجرة موجة ورا موجة، اجمع تعزيزات الدرع والنيران السريعة والموزّعة، واحذر زعيم كل 5 موجات!</p>
+    <button class="btn-main" onclick="startGame()">ابدأ المهمة 🚀</button>
+  </div>
+
+  <div class="overlay" id="gameOverScreen">
+    <div class="eyebrow">انتهت المهمة</div>
+    <h2 id="goTitle" style="color:var(--pink);">💥 سقطت مركبتك</h2>
+    <p id="goDesc"></p>
+    <button class="btn-main" onclick="startGame()">مهمة جديدة 🔄</button>
+  </div>
+
+  <div class="overlay" id="pauseOverlay">
+    <h2>⏸ توقف مؤقت</h2>
+    <div class="pause-actions">
+      <button class="pause-resume" onclick="resumeGame()">استمرار ▶️</button>
+<button class="pause-link" onclick="window.location.href='games.html'">الألعاب 🎮</button>  </div>
+</div>
+
+<script src="../js/pages/space-shooter.js"></script>
+</body>
+</html>

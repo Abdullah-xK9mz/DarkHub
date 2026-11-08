@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="https://i.postimg.cc/Y05YDvQL/icon-32x32.jpg">
+  <title>ورشة الادوات — أدوات رقمية صغيرة</title>
+  <link rel="stylesheet" href="../css/pages/tools.css">
+  <link rel="stylesheet" href="../css/features.css">
+</head>
+<body>
+
+    <!-- شريط الموقع الثابت — أعلى الصفحة -->
+    <header class="site-header">
+        <a href="../index.html" class="logo"> Dark Hub</a>
+        <nav>
+            <a href="../index.html">الرئيسية</a>
+            <a href="wallpapers.html">الخلفيات</a>
+            <a href="games.html">الألعاب</a>
+            <a href="Tools.html" class="active">الأدوات</a>
+        </nav>
+    </header>
+  
+<div class="container">
+  <header id="mainHeader">
+    <h1>🛠️ أدوات Dark Hub</h1>
+    <p>أدوات سريعة ومفيدة في مكان واحد</p>
+  </header>
+
+  <!-- مربع البحث -->
+  <div class="search-box" id="searchContainer">
+    <input type="text" id="toolSearchInput" placeholder="ابحث عن أداة..." oninput="filterTools()">
+  </div>
+
+  <!-- التصنيفات -->
+  <div class="categories-filter" id="categoriesContainer">
+    <button class="cat-btn active" onclick="filterCategory('all', this)">الكل</button>
+    <button class="cat-btn" onclick="filterCategory('download', this)">تحميل</button>
+    <button class="cat-btn" onclick="filterCategory('calc', this)">الحسابات</button>
+    <button class="cat-btn" onclick="filterCategory('conv', this)">التحويل</button>
+  </div>
+
+  <div class="tools-grid" id="toolsNav">
+    <a href="Tik_Downloader.html" class="tool-card" data-category="download" data-keywords="تيك توك تحميل فيديو بدون علامة مائية تيكتوك">
+      <div class="tool-card-content">
+        <div class="tool-card-header">
+          <span class="icon">📥</span>
+          <h3>TikTok Downloader</h3>
+        </div>
+        <p>تحميل فيديوهات وألبومات صور تيك توك بدون علامة مائية وبأعلى جودة.</p>
+      </div>
+      <button class="use-tool-btn">استخدام الأداة ←</button>
+    </a>
+
+    <div class="tool-card" data-category="conv" data-keywords="تحويل الصور و ICO صيغ الصور أبعاد آيقونات البرامج والمواقع" data-tool="converter">
+      <div class="tool-card-content">
+        <div class="tool-card-header">
+          <span class="icon">🖼️</span>
+          <h3>تحويل الصور و ICO</h3>
+        </div>
+        <p>تحويل صيغ الصور وتغيير أبعادها</p>
+      </div>
+      <button class="use-tool-btn">استخدام الأداة ←</button>
+    </div>
+
+    <div class="tool-card" data-category="conv" data-keywords="تحويل وحدات الطول الوزن درجة الحرارة" data-tool="units">
+      <div class="tool-card-content">
+        <div class="tool-card-header">
+          <span class="icon">📐</span>
+          <h3>تحويل الوحدات</h3>
+        </div>
+        <p>الطول والوزن ودرجة الحرارة</p>
+      </div>
+      <button class="use-tool-btn">استخدام الأداة ←</button>
+    </div>
+
+  
+       <div class="tool-card" data-category="calc" data-keywords="مؤشر كتلة الجسم BMI حساب الوزن والطول" data-tool="bmi">
+      <div class="tool-card-content">
+        <div class="tool-card-header">
+          <span class="icon">⚖️</span>
+          <h3>مؤشر كتلة الجسم</h3>
+        </div>
+        <p>حساب مؤشر كتلة الجسم والوزن المثالي</p>
+      </div>
+      <button class="use-tool-btn">استخدام الأداة ←</button>
+    </div>
+
+  
+    <div class="tool-card" data-category="calc" data-keywords="حاسبة العمر تاريخ الميلاد بالتفصيل" data-tool="age">
+      <div class="tool-card-content">
+        <div class="tool-card-header">
+          <span class="icon">🎂</span>
+          <h3>حاسبة العمر</h3>
+        </div>
+        <p>احسب عمرك بالتفصيل (سنة، شهر، يوم)</p>
+      </div>
+      <button class="use-tool-btn">استخدام الأداة ←</button>
+    </div>
+
+    <div class="tool-card" data-category="calc" data-keywords="فرق التواريخ حساب الفارق بين تاريخين" data-tool="date-diff">
+      <div class="tool-card-content">
+        <div class="tool-card-header">
+          <span class="icon">📅</span>
+          <h3>فرق التواريخ</h3>
+        </div>
+        <p>حساب الفارق المدقق بين أي تاريخين</p>
+      </div>
+      <button class="use-tool-btn">استخدام الأداة ←</button>
+    </div>
+  </div>
+
+  <main class="workbench" id="workbench">
+    <button class="back-btn" onclick="showHome()">← العودة للأدوات</button>
+
+    <!-- تحويل الصور وتوليد الـ ICO -->
+    <section class="tool-section" id="tool-converter">
+      <h2 class="panel-title">محول الصور وتوليد ملفات ICO</h2>
+      <p class="panel-desc">تحويل صيغ الصور وتغيير أبعادها أو إنشائها بصيغة آيقونات البرامج والمواقع (.ico)</p>
+      
+      <div class="dropzone" onclick="document.getElementById('imgConverterInput').click()">
+        <span class="icon" style="font-size: 2rem;">📁</span>
+        <p id="imgConvLabel" style="margin-top: 6px;">اضغط هنا لاختيار الصورة</p>
+        <input type="file" id="imgConverterInput" accept="image/*" style="display:none;" onchange="handleConverterImageSelect(event)">
+      </div>
+
+      <div id="imgConvPreviewBox" style="display:none; text-align:center; margin-top:15px;">
+        <img id="imgConvPreview" src="" alt="المعاينة" style="max-height: 150px; border-radius: 8px; border: 1px solid var(--card-border);">
+      </div>
+
+      <div class="form-row" style="margin-top: 15px;">
+        <div>
+          <label>الصيغة المطلوبة</label>
+          <select id="imgTargetFormat" onchange="toggleIcoSizes()">
+            <option value="ico">ICO (آيقونة برامج ومواقع)</option>
+            <option value="png">PNG</option>
+            <option value="jpeg">JPG / JPEG</option>
+            <option value="webp">WEBP</option>
+          </select>
+        </div>
+        <div id="icoSizeGroup">
+          <label>حجم الأيقونة (ICO)</label>
+          <select id="icoDimension" class="en-num">
+            <option value="16">16 x 16 (Favicon صغير)</option>
+            <option value="32" selected>32 x 32 (Favicon قياسي)</option>
+            <option value="48">48 x 48 (آيقونة سطح المكتب)</option>
+            <option value="64">64 x 64 (آيقونة متوسطة)</option>
+            <option value="128">128 x 128 (آيقونة كبيرة)</option>
+            <option value="256">256 x 256 (أقصى دقة ICO)</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="action-btn" onclick="processImageConversion()">تحويل وتحميل الصورة 🚀</button>
+    </section>
+
+    <!-- تحويل الوحدات -->
+    <section class="tool-section" id="tool-units">
+      <h2 class="panel-title">تحويل الوحدات</h2>
+      <p class="panel-desc">تحويل الطول، الوزن، ودرجة الحرارة</p>
+      <label>نوع الوحدة</label>
+      <select id="unitType" onchange="setupUnitOptions()">
+        <option value="length">الطول</option>
+        <option value="weight">الوزن</option>
+        <option value="temp">درجة الحرارة</option>
+      </select>
+      <div class="form-row" style="margin-top: 10px;">
+        <div>
+          <label>من</label>
+          <input type="number" id="unitFromInput" class="en-num" value="1" oninput="convertUnits('from')">
+          <select id="unitFromSelect" onchange="convertUnits('from')" style="margin-top: 5px;"></select>
+        </div>
+        <div>
+          <label>إلى</label>
+          <input type="number" id="unitToInput" class="en-num" oninput="convertUnits('to')">
+          <select id="unitToSelect" onchange="convertUnits('from')" style="margin-top: 5px;"></select>
+        </div>
+      </div>
+    </section>
+
+ 
+    <!-- حاسبة الكتلة -->
+    <section class="tool-section" id="tool-bmi">
+      <h2 class="panel-title">حاسبة كتلة الجسم (BMI)</h2>
+      <p class="panel-desc">حساب مؤشر كتلة الجسم</p>
+      <div class="form-row">
+        <div>
+          <label>الوزن (كجم)</label>
+          <input type="number" id="bmiWeight" class="en-num" value="70" oninput="calculateBMI()">
+        </div>
+        <div>
+          <label>الطول (سم)</label>
+          <input type="number" id="bmiHeight" class="en-num" value="170" oninput="calculateBMI()">
+        </div>
+      </div>
+      <div class="result-box" id="bmiOutput">أدخل بياناتك</div>
+    </section>
+
+    <!-- حاسبة العمر -->
+    <section class="tool-section" id="tool-age">
+      <h2 class="panel-title">حاسبة العمر الدقيقة</h2>
+      <p class="panel-desc">احسب عمرك بالتفصيل (سنة، شهر، يوم)</p>
+      <label>تاريخ الميلاد</label>
+      
+      <div class="custom-date-trigger" onclick="openPickerModal('age')">
+        <input type="text" id="ageInputDisplay" class="en-num" readonly placeholder="اختر تاريخ الميلاد..." style="cursor: pointer;">
+      </div>
+
+      <div class="result-box" id="ageOutput">اختر تاريخ ميلادك</div>
+    </section>
+
+    <!-- حاسبة الفرق بين تاريخين -->
+    <section class="tool-section" id="tool-date-diff">
+      <h2 class="panel-title">حاسبة الفرق بين تاريخين</h2>
+      <p class="panel-desc">حساب الفارق المدقق بالسنين والأشهر والأيام بين أي تاريخين</p>
+
+      <div class="form-row">
+        <div>
+          <label>التاريخ الأول</label>
+          <div class="custom-date-trigger" onclick="openPickerModal('diffStart')">
+            <input type="text" id="diffStartDisplay" class="en-num" readonly placeholder="اختر التاريخ الأول..." style="cursor: pointer;">
+          </div>
+        </div>
+        <div>
+          <label>التاريخ الثاني</label>
+          <div class="custom-date-trigger" onclick="openPickerModal('diffEnd')">
+            <input type="text" id="diffEndDisplay" class="en-num" readonly placeholder="اختر التاريخ الثاني..." style="cursor: pointer;">
+          </div>
+        </div>
+      </div>
+
+      <div class="result-box" id="dateDiffOutput" style="font-size: 0.95rem; text-align: right; line-height: 1.8;">
+        اختر التاريخين لرؤية الفارق التفصيلي
+      </div>
+    </section>
+
+ 
+  
+  <!-- النافذة المنبثقة المشتركة لاختيار التاريخ -->
+  <div class="custom-picker-modal" id="pickerModal">
+    <div class="custom-picker-card">
+      <h3 id="pickerModalTitle" style="text-align: center; color: var(--primary-cyan); font-size: 1.1rem;">تحديد التاريخ</h3>
+      <div class="picker-columns">
+        <div class="picker-col">
+          <label>اليوم</label>
+          <button class="step-btn" onclick="adjustPickerVal('day', 1)">+</button>
+          <input type="number" id="pDay" class="en-num" min="1" max="31" value="1">
+          <button class="step-btn" onclick="adjustPickerVal('day', -1)">-</button>
+        </div>
+        <div class="picker-col">
+          <label>الشهر</label>
+          <button class="step-btn" onclick="adjustPickerVal('month', 1)">+</button>
+          <input type="number" id="pMonth" class="en-num" min="1" max="12" value="1">
+          <button class="step-btn" onclick="adjustPickerVal('month', -1)">-</button>
+        </div>
+        <div class="picker-col">
+          <label>السنة</label>
+          <button class="step-btn" onclick="adjustPickerVal('year', 1)">+</button>
+          <input type="number" id="pYear" class="en-num" min="1900" max="2099" value="2000">
+          <button class="step-btn" onclick="adjustPickerVal('year', -1)">-</button>
+        </div>
+      </div>
+      <div class="picker-actions">
+        <button class="btn-cancel" onclick="closePickerModal()">إلغاء</button>
+        <button class="btn-clear" onclick="clearPickerDate()">محو</button>
+        <button class="btn-set" onclick="confirmPickerDate()">تعيين</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>جميع الحقوق محفوظة © 2026</p>
+  </footer>
+</div>
+
+<script src="../js/pages/tools.js"></script>
+</body>
+</html>
