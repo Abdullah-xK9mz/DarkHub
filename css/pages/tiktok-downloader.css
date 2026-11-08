@@ -1,0 +1,476 @@
+
+        :root {
+            --primary: #0084ff;
+            --secondary: #00c6ff;
+            --bg: #0f172a;
+            --card-bg: #1e293b;
+            --text: #f8fafc;
+            --accent: #3b82f6;
+        }
+
+        /* =========================================================
+            1. تصميم الكمبيوتر (Desktop Styles - للشاشات الأكبر من 768px)
+            ========================================================= */
+        @media (min-width: 769px) {
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background-color: var(--bg);
+                color: var(--text);
+                margin: 0;
+                padding: 20px;
+                display: flex;
+                justify-content: center;
+            }
+
+            .container {
+                width: 100%;
+                max-width: 500px;
+                background: var(--card-bg);
+                padding: 25px;
+                border-radius: 15px;
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+                border: 1px solid #334155;
+            }
+
+            h1 {
+                text-align: center;
+                color: var(--secondary);
+                margin-bottom: 5px;
+            }
+
+            p.subtitle {
+                text-align: center;
+                color: #94a3b8;
+                font-size: 0.9rem;
+                margin-bottom: 25px;
+            }
+
+            .input-group {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            textarea {
+                width: 100%;
+                height: 75px;
+                background: #0f172a;
+                border: 1px solid #334155;
+                border-radius: 10px;
+                color: #fff;
+                padding: 12px;
+                box-sizing: border-box;
+                resize: vertical;
+                font-size: 0.95rem;
+            }
+
+            textarea:focus {
+                outline: none;
+                border-color: var(--primary);
+            }
+
+            .btn-paste {
+                background: #334155;
+                color: #fff;
+                border: 1px solid #475569;
+                padding: 10px;
+                border-radius: 8px;
+                font-weight: bold;
+                cursor: pointer;
+                transition: 0.2s;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 8px;
+            }
+
+            .btn-paste:hover {
+                background: #475569;
+            }
+
+            button.btn-main {
+                width: 100%;
+                background: linear-gradient(45deg, #0052d4, #4364f7, #6fb1fc);
+                color: white;
+                border: none;
+                padding: 14px;
+                border-radius: 10px;
+                font-size: 1.1rem;
+                font-weight: bold;
+                cursor: pointer;
+                margin-top: 10px;
+                transition: 0.3s;
+            }
+
+            button.btn-main:hover {
+                opacity: 0.9;
+            }
+
+            .btn-back {
+                width: 100%;
+                background: #334155;
+                color: #f8fafc;
+                border: 1px solid #475569;
+                padding: 12px;
+                border-radius: 10px;
+                font-size: 1rem;
+                font-weight: bold;
+                cursor: pointer;
+                margin-top: 10px;
+                transition: 0.2s;
+                display: block;
+                text-align: center;
+                text-decoration: none;
+                box-sizing: border-box;
+            }
+
+            .btn-back:hover {
+                background: #475569;
+            }
+
+            .results-grid {
+                margin-top: 30px;
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .card {
+                background: #0f172a;
+                border-radius: 10px;
+                padding: 15px;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                border-right: 4px solid var(--primary);
+                border-top: 1px solid #334155;
+            }
+
+            .card-header {
+                display: flex;
+                gap: 15px;
+                align-items: center;
+            }
+
+            .card-header img.thumb {
+                width: 80px;
+                height: 80px;
+                object-fit: cover;
+                border-radius: 8px;
+                cursor: pointer;
+            }
+
+            .card-title {
+                font-size: 0.95rem;
+                line-height: 1.4;
+                flex-grow: 1;
+            }
+
+            .actions-group {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+                gap: 10px;
+            }
+
+            .btn-action {
+                background: var(--primary);
+                color: #fff;
+                border: none;
+                padding: 10px;
+                border-radius: 6px;
+                font-weight: bold;
+                text-align: center;
+                cursor: pointer;
+                transition: 0.2s;
+                font-size: 0.85rem;
+            }
+
+            .btn-action:hover {
+                background: #2563eb;
+            }
+
+            .btn-action.btn-audio {
+                background: #8b5cf6;
+            }
+
+            .btn-action.btn-audio:hover {
+                background: #7c3aed;
+            }
+
+            .btn-action.btn-preview {
+                background: #334155;
+                color: #f8fafc;
+            }
+
+            .btn-action.btn-preview:hover {
+                background: #475569;
+            }
+
+            .images-gallery {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+                gap: 12px;
+                margin-top: 10px;
+            }
+
+            .image-item {
+                display: flex;
+                flex-direction: column;
+                gap: 6px;
+                background: #1e293b;
+                padding: 8px;
+                border-radius: 8px;
+            }
+
+            .image-item img {
+                width: 100%;
+                height: 120px;
+                object-fit: cover;
+                border-radius: 6px;
+                cursor: pointer;
+            }
+        }
+
+        /* =========================================================
+            2. تصميم الموبايل (Mobile - للشاشات حتى 768px)
+            ========================================================= */
+        @media (max-width: 768px) {
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+                background-color: #090d16;
+                color: #f1f5f9;
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            .container {
+                width: 100%;
+                min-height: 100vh;
+                padding: 20px 16px;
+                box-sizing: border-box;
+                background: transparent;
+                border: none;
+                box-shadow: none;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+                font-weight: 800;
+                text-align: right;
+                color: #ffffff;
+                margin: 10px 0 4px 0;
+            }
+
+            p.subtitle {
+                text-align: right;
+                color: #64748b;
+                font-size: 0.85rem;
+                margin-bottom: 20px;
+            }
+
+            .input-group {
+                background: #131c2e;
+                border: 1px solid #1e2d4a;
+                border-radius: 16px;
+                padding: 12px;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            }
+
+            textarea {
+                width: 100%;
+                height: 70px;
+                background: transparent;
+                border: none;
+                outline: none;
+                color: #fff;
+                font-size: 0.95rem;
+                resize: none;
+                box-sizing: border-box;
+            }
+
+            .btn-paste {
+                background: #1e293b;
+                color: #38bdf8;
+                border: 1px solid #334155;
+                padding: 8px 14px;
+                border-radius: 10px;
+                font-weight: 600;
+                font-size: 0.8rem;
+                float: left;
+                margin-top: 5px;
+            }
+
+            button.btn-main {
+                width: 100%;
+                background: linear-gradient(135deg, #0066ff, #00c6ff);
+                color: #fff;
+                border: none;
+                padding: 16px;
+                border-radius: 14px;
+                font-size: 1rem;
+                font-weight: 700;
+                margin-top: 15px;
+                box-shadow: 0 8px 20px rgba(0, 102, 255, 0.35);
+                letter-spacing: 0.3px;
+            }
+
+            .btn-back {
+                width: 100%;
+                background: #131c2e;
+                color: #94a3b8;
+                border: 1px solid #1e2d4a;
+                padding: 14px;
+                border-radius: 14px;
+                font-size: 0.95rem;
+                font-weight: 700;
+                margin-top: 10px;
+                display: block;
+                text-align: center;
+                text-decoration: none;
+                box-sizing: border-box;
+            }
+
+            .results-grid {
+                margin-top: 25px;
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .card {
+                background: #131c2e;
+                border-radius: 16px;
+                padding: 16px;
+                border: 1px solid #1e2d4a;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            }
+
+            .card-header {
+                display: flex;
+                gap: 12px;
+                align-items: flex-start;
+                margin-bottom: 15px;
+            }
+
+            .card-header img.thumb {
+                width: 70px;
+                height: 70px;
+                object-fit: cover;
+                border-radius: 12px;
+            }
+
+            .card-title {
+                font-size: 0.9rem;
+                color: #cbd5e1;
+                line-height: 1.4;
+            }
+
+            .actions-group {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+                gap: 8px;
+            }
+
+            .btn-action {
+                width: 100%;
+                padding: 11px 8px;
+                border-radius: 10px;
+                font-size: 0.82rem;
+                font-weight: 700;
+                border: none;
+                color: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-sizing: border-box;
+                background: #0070f3;
+            }
+
+            .btn-action.btn-audio {
+                background: #7c3aed;
+            }
+
+            .btn-action.btn-preview {
+                background: #1e293b;
+                color: #94a3b8;
+                border: 1px solid #334155;
+            }
+
+            .images-gallery {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+                margin-top: 10px;
+            }
+
+            .image-item {
+                background: #090d16;
+                padding: 8px;
+                border-radius: 12px;
+                border: 1px solid #1e2d4a;
+            }
+
+            .image-item img {
+                width: 100%;
+                height: 130px;
+                object-fit: cover;
+                border-radius: 8px;
+            }
+        }
+
+        /* =========================================================
+            3. العناصر المشتركة (Shared Components)
+            ========================================================= */
+        .btn-action.downloaded {
+            background: #10b981 !important;
+            color: #fff !important;
+        }
+
+        .loader {
+            display: none;
+            text-align: center;
+            margin: 20px 0;
+            font-weight: bold;
+            color: var(--secondary);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+
+        .modal-content {
+            max-width: 95%;
+            max-height: 80vh;
+            border-radius: 12px;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            color: #fff;
+            font-size: 35px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        video.preview-video {
+            width: 100%;
+            max-height: 350px;
+            border-radius: 12px;
+            margin-top: 12px;
+            background: #000;
+        }
+    
